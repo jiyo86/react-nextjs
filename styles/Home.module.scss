@@ -1,0 +1,11 @@
+.ftcosection {
+    padding: 7em 0;
+    position: relative;
+
+    &.bgLight {
+        background: #f8f9fd !important;
+    }
+    &fctNoPt {
+        padding-top: 0 !important;
+    }
+}

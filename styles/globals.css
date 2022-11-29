@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: grey !important;
 }
 
 a {
@@ -12,6 +13,7 @@ a {
   -o-transition: .3s all ease;
   transition: .3s all ease;
   color: #1ba12d;
+  text-decoration: none !important;
 
 }
 nav.navbar {
@@ -114,6 +116,34 @@ nav.navbar {
   box-sizing: border-box;
 }
 
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-consultation .form-control {
+  height: 44px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.3) !important;
+  font-size: 14px;
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+}
+
+.form-consultation textarea.form-control {
+  height: inherit !important;
+}
+
+.form-consultation .submit {
+  background: #1ba12d !important;
+  color: #fff !important;
+}
+
+footer ul.list-unstyled li a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -121,5 +151,10 @@ nav.navbar {
   body {
     color: white;
     background: black;
+  }
+}
+@media (min-width: 992px) {
+  .pl-lg-5, .px-lg-5 {
+    padding-left: 3rem !important;
   }
 }

@@ -16,9 +16,9 @@ export default function Footer() {
                 <h2 className={styles.footerHeading}>About us</h2>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                 <ul className="ftco-footer-social p-0">
-                  <li className="ftco-animate"><a href="https://preview.colorlib.com/theme/accounting/#" data-toggle="tooltip" data-placement="top" title="Twitter"><span className="fa fa-twitter"></span></a></li>
-                  <li className="ftco-animate"><a href="https://preview.colorlib.com/theme/accounting/#" data-toggle="tooltip" data-placement="top" title="Facebook"><span className="fa fa-facebook"></span></a></li>
-                  <li className="ftco-animate"><a href="https://preview.colorlib.com/theme/accounting/#" data-toggle="tooltip" data-placement="top" title="Instagram"><span className="fa fa-instagram"></span></a></li>
+                  <li className={styles.ftcoAnimate}><a href="https://preview.colorlib.com/theme/accounting/#" data-toggle="tooltip" data-placement="top" title="Twitter"><span className="fa fa-twitter"></span></a></li>
+                  <li className={styles.ftcoAnimate}><a href="https://preview.colorlib.com/theme/accounting/#" data-toggle="tooltip" data-placement="top" title="Facebook"><span className="fa fa-facebook"></span></a></li>
+                  <li className={styles.ftcoAnimate}><a href="https://preview.colorlib.com/theme/accounting/#" data-toggle="tooltip" data-placement="top" title="Instagram"><span className="fa fa-instagram"></span></a></li>
                 </ul>
               </div>
               <div className="col-md-8">
@@ -26,7 +26,7 @@ export default function Footer() {
                   <div className="col-md-12 col-lg-10">
                     <div className="row">
                       <div className="col-md-4 mb-md-0 mb-4">
-                        <h2 className="footer-heading">Services</h2>
+                        <h2 className={styles.footerHeading}>Services</h2>
                         <ul className="list-unstyled">
                           <li><a href="https://preview.colorlib.com/theme/accounting/#" className="py-1 d-block">Market Analysis</a></li>
                           <li><a href="https://preview.colorlib.com/theme/accounting/#" className="py-1 d-block">Accounting Advisor</a></li>
@@ -35,7 +35,7 @@ export default function Footer() {
                         </ul>
                       </div>
                       <div className="col-md-4 mb-md-0 mb-4">
-                        <h2 className="footer-heading">Discover</h2>
+                        <h2 className={styles.footerHeading}>Discover</h2>
                         <ul className="list-unstyled">
                           <li><a href="https://preview.colorlib.com/theme/accounting/#" className="py-1 d-block">About us</a></li>
                           <li><a href="https://preview.colorlib.com/theme/accounting/#" className="py-1 d-block">Contract us</a></li>
@@ -44,7 +44,7 @@ export default function Footer() {
                         </ul>
                       </div>
                       <div className="col-md-4 mb-md-0 mb-4">
-                        <h2 className="footer-heading">Resources</h2>
+                        <h2 className={styles.footerHeading}>Resources</h2>
                         <ul className="list-unstyled">
                           <li><a href="https://preview.colorlib.com/theme/accounting/#" className="py-1 d-block">Security</a></li>
                           <li><a href="https://preview.colorlib.com/theme/accounting/#" className="py-1 d-block">Global</a></li>
@@ -64,8 +64,8 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
-            <h2 className="footer-heading">Free consultation</h2>
+          <div className={`col-md-3 py-md-5 py-4 pl-lg-5 ${styles.asideStretchRight}`}>
+            <h2 className={styles.footerHeading}>Free consultation</h2>
             <form action="https://preview.colorlib.com/theme/accounting/#" className="form-consultation">
               <div className="form-group">
                 <input type="text" className="form-control" placeholder="Your Name" />
