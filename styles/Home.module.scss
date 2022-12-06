@@ -5,7 +5,11 @@
     &.bgLight {
         background: #f8f9fd !important;
     }
-    &fctNoPt {
+    &.fctNoPt {
         padding-top: 0 !important;
+    }
+    &.testimonySection {
+        z-index: 0;
+        position: relative
     }
 }

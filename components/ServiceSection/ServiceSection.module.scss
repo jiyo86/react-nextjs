@@ -1,0 +1,25 @@
+.services {
+    display: block;
+    position: relative;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    .mediaBody {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+
+        h3 {
+            font-weight: 700;
+            font-size: 20px;
+            color: #000000;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+    }
+}

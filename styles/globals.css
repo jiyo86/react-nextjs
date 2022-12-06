@@ -16,6 +16,11 @@ a {
   text-decoration: none !important;
 
 }
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+}
 nav.navbar {
   position: relative;
   display: -webkit-box;
@@ -142,6 +147,55 @@ nav.navbar {
 
 footer ul.list-unstyled li a {
   color: rgba(255, 255, 255, 0.5);
+}
+
+/* Carousel*/
+.carousel .carousel-caption {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  bottom: 20%;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+.justify-content-center {
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+
+.align-self-stretch {
+  -ms-flex-item-align: stretch !important;
+  -ms-grid-row-align: stretch !important;
+  align-self: stretch !important;
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.ftco-animate {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ftco-animated {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.align-items-center {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
 }
 
 @media (prefers-color-scheme: dark) {

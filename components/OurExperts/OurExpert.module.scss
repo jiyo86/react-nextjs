@@ -1,0 +1,25 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    height: 400px;
+    background: #8fd0d2;
+}
+.headingSection {
+    color: #000;
+    .subHeading {
+        font-size: 12px;
+        display: block;
+        font-weight: 600;
+        color: #1ba12d;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    h2 {
+        font-size: 30px;
+        font-weight: 800;
+        color: #000;
+    }
+}
