@@ -3,7 +3,7 @@ name: "GCP Build and Deploy to Azure Storage"
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -46,14 +46,14 @@ jobs:
       - name: Login to Azure (Dev)
         uses: azure/login@v1
         with:
-          creds: ${{ }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
           allow-no-subscriptions: true
 
       - name: Deploy to Azure Dev Storage
         run: |
           az storage blob upload-batch \
             --auth-mode login \
-            --account-name  \
-            --destination \
+            --account-name reactjsproject \
+            --destination test \
             --source . \
             --pattern "*"
