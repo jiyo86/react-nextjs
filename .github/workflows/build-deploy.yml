@@ -1,0 +1,59 @@
+name: "GCP Build and Deploy to Azure Storage"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build React App
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Specify the Node.js version required for your React project
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the React app
+        run: npm run build
+
+      - name: Package Build as Zip
+        run: zip -r build.zip ./build
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: build.zip
+
+  dev_deploy:
+    name: Deploy to Azure Dev Environment
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+
+      - name: Login to Azure (Dev)
+        uses: azure/login@v1
+        with:
+          creds: ${{ }}
+          allow-no-subscriptions: true
+
+      - name: Deploy to Azure Dev Storage
+        run: |
+          az storage blob upload-batch \
+            --auth-mode login \
+            --account-name  \
+            --destination \
+            --source . \
+            --pattern "*"
